@@ -12,6 +12,8 @@ import AppLink from '@/components/AppLink';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
+import dogImage from '../assets/images/dog.svg';
+
 export default function Home() {
   return (
     <main>
@@ -20,21 +22,21 @@ export default function Home() {
           links={breadcrumpLinks}
           separator={
             <span>
-              <MdKeyboardArrowRight className="text-blue-500 inline-block mx-1" />
+              <MdKeyboardArrowRight className="text-green inline-block mx-1" />
             </span>
           }
         />
       </div>
       <div className="container max-w-2xl m-auto py-5 px-5 sm:px-0">
-        <h1 className="text-4xl font-black mb-10">
-          What colors do french dogs com in?
+        <h1 className="text-h1 font-black mb-10 font-halloween">
+          What colors do french Bulldogs com in?
         </h1>
         <Image
           alt="an image"
-          src={'/'}
-          className="h-[25em] w-full bg-gray-100 rounded-lg mb-10"
+          src={dogImage}
+          className="h-[25em] w-full bg rounded-lg mb-10"
           height={100}
-          width={250}
+          width={300}
         />
 
         <div className="">
@@ -45,12 +47,16 @@ export default function Home() {
           <TextBlock content={content4} title="Peid Frenchie" />
         </div>
 
-        <div className="p-6 rounded-xl bg-gray-100 py-10 mt-5">
-          <h1 className="font-bold text-3xl mb-8">Related Questions</h1>
+        <div className="p-6 rounded-2xl bg-kin-white py-30 mt-60 mb-[4em]">
+          <h1 className="font-bold text-h2 font-halloween mb-30 tracking-tightest">
+            Related Questions
+          </h1>
           <div>
             {relatedQuestions.map((link) => (
               <div className="mb-4">
-                <AppLink href={link.href}>{link.text}</AppLink>
+                <AppLink className="text-base" href={link.href}>
+                  {link.text}
+                </AppLink>
               </div>
             ))}
           </div>
